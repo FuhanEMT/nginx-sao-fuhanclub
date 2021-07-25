@@ -11,10 +11,10 @@ import { data } from '../antv-x6/service/data';
 })
 export class AntvX6Component implements OnInit {
 
-  graph?: Graph
-  dndData?: any
-
-  panels?: any
+  graph?: Graph;
+  dndData?: any;
+  panels?: any;
+  viewWidth?: any;
 
   @ViewChild('antvX6') antvX6?: ElementRef;
   @ViewChild('box') box?: ElementRef;
@@ -54,10 +54,14 @@ export class AntvX6Component implements OnInit {
     this.dndData = this.data.data
   }
 
-  ngAfterViewInit() {
+  async ngAfterViewInit () {
     // 初始化 antv x6 背景
     this.antxSeric.getviewInit(this.box?.nativeElement)
     this.antxSeric.getAntxInit(this.antvX6?.nativeElement, this.leftBox?.nativeElement, this.min?.nativeElement)
+    Promise.resolve(null).then(() => {
+    this.viewWidth = this.antxSeric.viewWidth
+    console.log(this.viewWidth)
+    })
   }
 
   // 开始拖拽
@@ -65,6 +69,19 @@ export class AntvX6Component implements OnInit {
     console.log(e, item)
     const node = this.antxSeric.graph.createNode({
       shape: 'amly-chart-images',
+      ports: [{
+        id: 'ports1',
+        group: 'in'
+      }, {
+        id: 'ports2',
+        group: 'left'
+      }, {
+        id: 'ports3',
+        group: 'right'
+      }, {
+        id: 'ports4',
+        group: 'bottom'
+      }]
     });
     this.antxSeric.dnd.start(node, e);
   }

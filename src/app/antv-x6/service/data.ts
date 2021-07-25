@@ -29,7 +29,71 @@ export class data {
 
 Shape.Circle.define({
     shape: 'amly-chart-images',
-    width: 300, // 默认宽度
-    height: 40, // 默认高度
-    
+    width: 50, // 默认宽度
+    height: 50, // 默认高度
+    // 设置该图形下的链接柱
+    ports: {
+        groups: {
+            in: {
+                position: 'top',
+                label: {
+                    position: 'top'
+                },
+                attrs: {
+                    circle: {
+                        r: 6,
+                        magnet: true,
+                        stroke: '#31d0c6',
+                        strokeWidth: 2,
+                        fill: '#fff',
+                    }
+                }
+            },
+            left: {
+                position: 'left',
+                label: {
+                    position: 'left'
+                },
+                attrs: {
+                    circle: {
+                        r: 6,
+                        magnet: true,
+                        stroke: '#31d0c6',
+                        strokeWidth: 2,
+                        fill: '#fff',
+                    }
+                }
+            },
+            right: {
+                position: 'right',
+                label: {
+                    position: 'right'
+                },
+                attrs: {
+                    circle: {
+                        r: 6,
+                        magnet: true,
+                        stroke: '#31d0c6',
+                        strokeWidth: 2,
+                        fill: '#fff',
+                    }
+                }
+            },
+            bottom: {
+                position: 'bottom',
+                label: {
+                    position: 'bottom'
+                },
+                attrs: {
+                    circle: {
+                        r: 6,
+                        magnet: true,
+                        stroke: '#31d0c6',
+                        strokeWidth: 2,
+                        fill: '#fff',
+                    }
+                }
+            }
+        },
+    }
 })

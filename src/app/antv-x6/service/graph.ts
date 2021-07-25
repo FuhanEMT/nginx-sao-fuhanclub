@@ -25,9 +25,18 @@ export class AntvxServiceService {
     getAntxInit(elemt: any, elLe: any , min: any) {
         this.graph = new Graph({
             container: elemt,
+            connecting:{
+                snap: true
+            },
+            // 是否开启配置调节节点大小
+            resizing: {
+                enabled: true
+            },
+            // 是否开启滚动
             scroller: {
                 enabled: true,
             },
+            // 是否开启小地图
             minimap: {
                 enabled: true,
                 container: min
@@ -46,8 +55,8 @@ export class AntvxServiceService {
         })
 
         this.graph.fromJSON({})
-        // 画布内容中心与视图对齐
-        this.graph.centerContent()
+        // 画布内容中心与视图对齐（开启小地图后会默认定到中心导致小地图偏移）
+        // this.graph.centerContent()
         // 初始化 边 线
         this.getEdgeInit()
         // 初始化 拖拽对象
@@ -69,6 +78,12 @@ export class AntvxServiceService {
             }
         })
     }
+
+    // 初始化 节点 使其添加链接柱
+    getShapeCrisce(){
+        
+    }
+
     // 初始化左侧拖拽对象
     getDadInit(elLe: any) {
         this.dnd = new Addon.Dnd({

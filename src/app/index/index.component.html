@@ -1,0 +1,24 @@
+<nz-layout style="height:100%">
+    <nz-sider nzCollapsible nzWidth="200px">
+        <div class="logo"></div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-submenu nzTitle="实验项目">
+                <ul>
+                    <li nz-menu-item>
+                        <a [routerLink]="['antvX6']"> X6图像编辑功能</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li nz-menu-item>
+          <i nz-icon nzType="file"></i>
+          <span>File</span>
+        </li> -->
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header></nz-header>
+        <nz-content class="club-box-content">
+            <router-outlet></router-outlet>
+        </nz-content>
+    </nz-layout>
+</nz-layout>

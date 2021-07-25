@@ -1,0 +1,14 @@
+<div class="ant-box" #box>
+    <!-- left content -->
+    <div class="antx-club-left">
+        <nz-collapse>
+            <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active">
+                <div>
+                    <img (mousedown)="getDragElGraph($event, item)" [width]="item.width" *ngFor="let item of panel.data" [src]="item.url" alt="">
+                </div>
+            </nz-collapse-panel>
+        </nz-collapse>
+    </div>
+    <div #antvX6></div>
+    <div class="antx-min-box" #min></div>
+</div>

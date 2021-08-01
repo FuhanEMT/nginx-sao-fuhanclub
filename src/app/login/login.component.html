@@ -11,6 +11,29 @@
             <p-card class="club-card-box">
                 <ng-template pTemplate="header">
                     <div class="header-crad">Welcome Fuhan system laboratory</div>
+                    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                        <nz-form-item>
+                            <nz-form-control nzErrorTip="Please input your username!">
+                                <nz-input-group [nzPrefix]="prefixIconUser">
+                                    <ng-template #prefixIconUser>
+                                        <i class="iconfont icon-yonghu"></i>
+                                    </ng-template>
+                                    <input type="text" nz-input formControlName="userName" placeholder="Username" />
+                                </nz-input-group>
+                            </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                            <nz-form-control>
+                                <nz-input-group [nzPrefix]="prefixPassword">
+                                    <ng-template #prefixPassword>
+                                        <i class="iconfont icon-mima"></i>
+                                    </ng-template>
+                                    <input type="password" nz-input formControlName="password" placeholder="UserPassword" />
+                                </nz-input-group>
+                            </nz-form-control>
+                        </nz-form-item>
+                        <button nz-button class="login-form-margin" nzType="primary" (click)="getValidateValue()">Log in</button>
+                    </form>
                 </ng-template>
             </p-card>
         </div>

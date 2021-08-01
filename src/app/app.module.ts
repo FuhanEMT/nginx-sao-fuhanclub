@@ -10,6 +10,9 @@ import {CardModule} from 'primeng/card';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { LoginComponent } from './login/login.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -43,7 +46,10 @@ registerLocaleData(zh);
     NzLayoutModule,
     ReactiveFormsModule,
     RouterModule,
-    NzCollapseModule
+    NzCollapseModule,
+    NzFormModule,
+    NzInputModule,
+    NzButtonModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

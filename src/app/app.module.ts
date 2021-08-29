@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './index/index.component';
 import { AntvX6Component } from './antv-x6/antv-x6.component';
+import { SckotioComponent } from './sckotio/sckotio.component';
 
 registerLocaleData(zh);
 
@@ -32,7 +33,8 @@ registerLocaleData(zh);
     AppComponent,
     LoginComponent,
     IndexComponent,
-    AntvX6Component
+    AntvX6Component,
+    SckotioComponent
   ],
   imports: [
     BrowserModule,

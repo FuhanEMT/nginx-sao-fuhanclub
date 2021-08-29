@@ -6,7 +6,7 @@ import { AntvX6Component } from './antv-x6/antv-x6.component';
 
 const routes: Routes = [{
   path: '',
-  component: LoginComponent
+  component: IndexComponent
 },{
   path: 'main',
   component: IndexComponent,

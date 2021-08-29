@@ -1,4 +1,7 @@
 <div class="club-fuhan-box">
+    <div class="club-fuhan-transition">
+
+    </div>
     <div class="club-centent-box">
         <div>
             <h2>OK 这是一个正在开发的后台（没有设计，孤高的灵魂不允许我抄袭。</h2>
@@ -11,6 +14,8 @@
             <p-card class="club-card-box">
                 <ng-template pTemplate="header">
                     <div class="header-crad">Welcome Fuhan system laboratory</div>
+                </ng-template>
+                <ng-template pTemplate="body">
                     <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
                         <nz-form-item>
                             <nz-form-control nzErrorTip="Please input your username!">
@@ -28,11 +33,13 @@
                                     <ng-template #prefixPassword>
                                         <i class="iconfont icon-mima"></i>
                                     </ng-template>
-                                    <input type="password" nz-input formControlName="password" placeholder="UserPassword" />
+                                    <input type="password" nz-input formControlName="password"
+                                        placeholder="UserPassword" />
                                 </nz-input-group>
                             </nz-form-control>
                         </nz-form-item>
-                        <button nz-button class="login-form-margin" nzType="primary" (click)="getValidateValue()">Log in</button>
+                        <button nz-button class="login-form-margin" nzType="primary" (click)="getValidateValue()">Log
+                            in</button>
                     </form>
                 </ng-template>
             </p-card>

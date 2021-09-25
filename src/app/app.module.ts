@@ -28,6 +28,7 @@ import { SckotioComponent } from './sckotio/sckotio.component';
 
 registerLocaleData(zh);
 
+
 @NgModule({
   declarations: [
     AppComponent,

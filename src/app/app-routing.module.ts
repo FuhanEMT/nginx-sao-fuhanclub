@@ -7,9 +7,6 @@ import { SckotioComponent } from './sckotio/sckotio.component'
 
 const routes: Routes = [{
   path: '',
-  component: IndexComponent
-},{
-  path: 'main',
   component: IndexComponent,
   children: [{
     path: 'antvX6',
